@@ -1,0 +1,56 @@
+<!-- TODO I wanna use drawer layout-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/layout_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minHeight="?attr/actionBarSize"/>
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/tab_main"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@null"
+                app:stl_defaultTabTextColor="@android:color/white"
+                app:stl_defaultTabTextMinWidth="120dp"
+                app:stl_defaultTabTextSize="14sp"
+                app:stl_indicatorAlwaysInCenter="true"
+                app:stl_indicatorColor="@android:color/white"
+                app:stl_indicatorCornerRadius="1.5dp"
+                app:stl_indicatorInterpolation="smart"
+                app:stl_indicatorThickness="3dp"
+                app:stl_underlineColor="@android:color/white"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- for drawer mock -->
+    <View
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/holo_red_dark"/>
+
+</FrameLayout>
